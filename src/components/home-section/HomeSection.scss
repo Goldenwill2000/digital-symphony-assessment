@@ -1,0 +1,14 @@
+.home-section-wrapper {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(to bottom, #ffffff 60%, #06121d 60%);
+}
+
+.home-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; // Center items in the row
+  gap: 32px;
+  padding: 32px;
+}

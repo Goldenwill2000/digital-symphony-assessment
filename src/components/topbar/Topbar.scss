@@ -1,0 +1,19 @@
+.topbar-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 24px;
+  position: sticky;
+  top: 0;
+  background: white;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  width: 75px;
+}
+
+.control-buttons {
+  margin-left: auto;
+}
