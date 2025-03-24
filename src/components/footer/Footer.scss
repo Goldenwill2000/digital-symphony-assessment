@@ -1,3 +1,5 @@
+@import "../../styles/global.scss";
+
 .footer-wrapper {
   display: flex;
   height: 100%;
@@ -8,6 +10,8 @@
   padding: 48px;
   box-sizing: border-box;
   gap: 32px;
+  font-family: "Poppins";
+  justify-content: center;
 }
 
 .footer-data-wrapper {
@@ -31,4 +35,61 @@
   box-sizing: border-box;
   gap: 12px;
   padding: 32px;
+  font-family: "Helvetica";
+}
+
+.logo-wrapper {
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+  .footer-wrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: #06121d;
+    flex-direction: row;
+    color: #ffffff;
+    padding: 48px;
+    box-sizing: border-box;
+    gap: 64px;
+    font-family: "Poppins";
+    justify-content: center;
+  }
+
+  .footer-data-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .footer-logo {
+    display: block;
+    height: 50px;
+    width: 200px;
+    flex-shrink: 0;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer-disclaimer {
+    flex-direction: row;
+  }
+}
+
+.footer-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: #007bff;
+  }
 }

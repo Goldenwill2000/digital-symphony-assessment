@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HomeCard from "../../widgets/home-card/HomeCard";
 import "./HomeSection.scss";
 import Home1 from "../../assets/images/home-1.png";
 import Home2 from "../../assets/images/home-2.png";
 import Home3 from "../../assets/images/home-3.png";
+import Button from "../../widgets/button/Button";
+import Element from "../../assets/images/element.png";
+
+import "aos/dist/aos.css";
+import * as Aos from "aos";
 export default function HomeSection() {
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true });
+  }, []);
+
   const [homes] = useState([
     {
       image: Home1,
@@ -20,7 +29,7 @@ export default function HomeSection() {
     {
       image: Home2,
       title: "Southern Water",
-      homeType: "Waterfront Nungalow",
+      homeType: "Waterfront Bungalow",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       monthlyRepayment: "1X,XXX",
@@ -42,23 +51,37 @@ export default function HomeSection() {
   ]);
   return (
     <div className="home-section-wrapper">
-      <div>Newly Launched Homes</div>
-      <div> Our exclusive range of custom designed homes</div>
+      <img className="home-element-backdrop" src={Element} alt="element" />
 
+      <div className="home-section-title" data-aos="fade-up">
+        Newly Launched Homes
+      </div>
+      <hr className="home-section-divider" data-aos="fade-up" />
+      <div className="home-section-subtitle" data-aos="fade-up">
+        Our exclusive range of custom designed homes
+      </div>
       <div className="home-card-grid">
-        {homes.map((home) => (
-          <HomeCard
-            image={home.image}
-            title={home.title}
-            homeType={home.homeType}
-            description={home.description}
-            monthlyRepayment={home.monthlyRepayment}
-            price={home.price}
-            onFeatureClick={home.onFeatureClick}
-            onRegisterClick={home.onRegisterClick}
-          />
+        {homes.map((home, index) => (
+          <div key={index} data-aos="fade-up">
+            <HomeCard
+              image={home.image}
+              title={home.title}
+              homeType={home.homeType}
+              description={home.description}
+              monthlyRepayment={home.monthlyRepayment}
+              price={home.price}
+              onFeatureClick={home.onFeatureClick}
+              onRegisterClick={home.onRegisterClick}
+            />
+          </div>
         ))}
       </div>
+      <Button inverted text="More Homes" onClick={() => console.log("click")} />
+      <img
+        className="home-element-backdrop-bottom"
+        src={Element}
+        alt="element"
+      />
     </div>
   );
 }

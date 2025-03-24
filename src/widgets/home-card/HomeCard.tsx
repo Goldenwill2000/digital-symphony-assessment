@@ -45,7 +45,7 @@ export default function HomeCard({
             <div className="home-card-price-text">Price from</div>
             <div className="home-card-price-highlight">
               {" "}
-              RM {commafy(price)}*
+              RM{commafy(price)}*
             </div>
           </div>
 
@@ -54,7 +54,7 @@ export default function HomeCard({
               Monthly Repayment
             </div>
             <div className="home-card-monthly-repayment-highlight">
-              RM {monthlyRepayment}
+              RM{monthlyRepayment}
             </div>
           </div>
         </div>

@@ -1,12 +1,15 @@
+@import "../../styles/global.scss";
 .benefit-card-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
   padding: 24px;
-
   background: #151e35;
   border-radius: 32px;
+  max-width: 200px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .benefit-card-image {
@@ -16,6 +19,17 @@
 
 .benefit-card-title {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 16px;
   color: #669999;
+  font-family: "Poppins";
+}
+
+.benefit-card-title-text {
+  color: #ffffff;
+  font-family: "Poppins";
+}
+
+.benefit-card-subtitle-text {
+  color: #669999;
+  font-family: "Poppins";
 }

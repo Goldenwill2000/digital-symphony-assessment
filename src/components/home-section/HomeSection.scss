@@ -1,14 +1,92 @@
+@import "../../styles/global.scss";
+
+//MOBILE
 .home-section-wrapper {
   height: 100%;
   width: 100%;
   text-align: center;
-  background: linear-gradient(to bottom, #ffffff 60%, #06121d 60%);
+  background: linear-gradient(to bottom, #ffffff 70%, #06121d 70%);
+  padding: 72px 24px;
+  box-sizing: border-box;
+  font-family: "Helvetica";
+  position: relative;
+  overflow: hidden;
+}
+
+.home-element-backdrop-bottom {
+  display: none;
+}
+
+.home-section-divider {
+  border: 1px solid #669999;
+  width: 40%;
+  margin: 0;
+  display: flex;
+  margin: 24px auto;
 }
 
 .home-card-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; // Center items in the row
-  gap: 32px;
-  padding: 32px;
+  justify-content: center;
+  gap: 48px;
+  padding: 48px 8px;
+  z-index: 2;
+  position: relative;
+}
+
+.home-section-title {
+  font-weight: 200;
+  font-size: 40px;
+  color: #669999;
+  line-height: 52px;
+  font-family: "BerlingskeSerif";
+}
+
+.home-section-subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.home-element-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 600px;
+  width: 100%;
+  height: 200px;
+  transform: rotate(-180deg);
+}
+
+//DESKTOP
+
+@media screen and (min-width: 480px) {
+  .home-section-wrapper {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(to bottom, #ffffff 60%, #06121d 60%);
+    padding: 72px 72px;
+    box-sizing: border-box;
+    font-family: "Helvetica";
+    position: relative;
+    overflow: hidden;
+  }
+
+  .home-element-backdrop {
+    display: none;
+    height: 0;
+  }
+
+  .home-element-backdrop-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 600px;
+    width: 100%;
+    height: 400px;
+    display: block;
+    z-index: 1;
+  }
 }

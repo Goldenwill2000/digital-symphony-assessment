@@ -22,7 +22,7 @@ export default function Button({
       style={{
         background: inverted ? "#669999" : "#f7f7f7",
         color: inverted ? "#f7f7f7" : "#669999",
-        border: inverted ? "1px solid #f7f7f7" : "1px solid #669999",
+        border: inverted ? "1px solid transparent" : "1px solid #669999",
         width: fullWidth ? "100%" : "auto",
       }}
       onClick={onClick}
