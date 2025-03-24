@@ -1,11 +1,12 @@
 import * as Aos from "aos";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Button from "../../widgets/button/Button";
 import Dropdown from "../../widgets/dropdown/Dropdown";
 import Input from "../../widgets/input/Input";
 import "./RegisterSection.scss";
 import { ToastContainer, toast } from "react-toastify";
 export default function RegisterSection() {
+  const [value, setValue] = useState("");
   const notify = () =>
     toast.success("Registration submitted successfully", {
       position: "top-right",
@@ -32,6 +33,7 @@ export default function RegisterSection() {
         <Input type="text" placeholder="Your Phone Number" fullWidth />
         <Input type="text" placeholder="Your Email Address" fullWidth />
         <Dropdown
+          value={value}
           options={[
             { label: "Palm Springs", value: "Palm Springs" },
             {
@@ -40,6 +42,7 @@ export default function RegisterSection() {
             },
             { label: "The Ruums", value: "The Ruums" },
           ]}
+          onChange={(value) => setValue(value)}
         />
         {/* <Input type="text" placeholder="Choose Project" fullWidth /> */}
         <div className="register-button-wrapper">
