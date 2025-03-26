@@ -30,7 +30,7 @@ export default function RegisterSection() {
       </div>
       <div className="register-form">
         <Input type="text" placeholder="Your Name" fullWidth />
-        <Input type="text" placeholder="Your Phone Number" fullWidth />
+        <Input type="number" placeholder="Your Phone Number" fullWidth />
         <Input type="text" placeholder="Your Email Address" fullWidth />
         <Dropdown
           value={value}
